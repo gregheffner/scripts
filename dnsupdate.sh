@@ -12,6 +12,6 @@ dns_ip=$(dig $HOST.$DOMAIN +short) #Check the registered IP in DNS
                                      -H "X-Auth-Email: whoyou@xxxx.xxxx" \
                                      -H "Authorization: Bearer xxxxxxxxxxxxxxxxxxxxxxxxxx" \
                                      -H "Content-Type: application/json" \
-                                     --data '{"type":"A","name":"host.domain","content":"'"$public_ip"'","ttl":1,"proxied":false}'
+                                     --data '{"type":"A","name":"'"$HOST"."$DOMAIN"'","content":"'"$public_ip"'","ttl":1,"proxied":false}'
 
         fi
